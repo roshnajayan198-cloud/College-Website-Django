@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses | Sefora National College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-wrap">
+      <a href="{% url 'home' %}" class="logo"><span class="logo-circle">S</span> Sefora National College</a>
+      <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'courses' %}" class="active">Courses</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BANNER -->
+  <header class="page-banner" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600');">
+    <div class="page-banner-content">
+      <h1>Academic Programs</h1>
+      <p>Discover programs designed to build skills, knowledge, and career opportunities.</p>
+    </div>
+  </header>
+
+  <!-- ENGINEERING -->
+  <section class="course-section">
+    <div class="container">
+      <div class="section-title"><h2>Engineering Programs</h2><p>Future-ready B.Tech programs aligned with industry needs.</p></div>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+
+        <div class="course-card">
+          <div class="emoji">💻</div>
+          <h3>B.Tech Computer Science</h3>
+          <p>Build software that shapes the digital world.</p>
+          <ul><li>Programming</li><li>Software Engineering</li><li>Cloud Computing</li><li>Cyber Security</li></ul>
+          <a href="{% url 'contact' %}" class="btn btn-primary">Learn More</a>
+        </div>
+
+        <div class="course-card">
+          <div class="emoji">🤖</div>
+          <h3>B.Tech AI & Machine Learning</h3>
+          <p>Master intelligent systems and data-driven design.</p>
+          <ul><li>Artificial Intelligence</li><li>Machine Learning</li><li>Deep Learning</li></ul>
+          <a href="{% url 'contact' %}" class="btn btn-primary">Learn More</a>
+        </div>
+
+        <div class="course-card">
+          <div class="emoji">⚙️</div>
+          <h3>B.Tech Mechanical</h3>
+          <p>Design and build the machines of tomorrow.</p>
+          <ul><li>Design</li><li>Manufacturing</li><li>Industrial Technology</li></ul>
+          <a href="{% url 'contact' %}" class="btn btn-primary">Learn More</a>
+        </div>
+
+        <div class="course-card">
+          <div class="emoji">⚡</div>
+          <h3>B.Tech Electrical</h3>
+          <p>Power systems, electronics, and renewable energy.</p>
+          <ul><li>Electronics</li><li>Power Systems</li></ul>
+          <a href="{% url 'contact' %}" class="btn btn-primary">Learn More</a>
+        </div>
+
+        <div class="course-card">
+          <div class="emoji">🌉</div>
+          <h3>B.Tech Civil</h3>
+          <p>Engineer the infrastructure of modern cities.</p>
+          <ul><li>Construction</li><li>Infrastructure</li></ul>
+          <a href="{% url 'contact' %}" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER -->
+  <section class="course-section">
+    <div class="container">
+      <div class="section-title"><h2>Other Programs</h2><p>BCA, MCA and M.Tech with cutting-edge curriculum.</p></div>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+
+        <div class="course-card">
+          <div class="emoji">📊</div>
+          <h3>BCA</h3>
+          <p>Foundation for a strong tech career.</p>
+          <ul><li>Web Development</li><li>Database Systems</li></ul>
+          <a href="{% url 'contact' %}" class="btn btn-primary">Learn More</a>
+        </div>
+
+        <div class="course-card">
+          <div class="emoji">📱</div>
+          <h3>MCA</h3>
+          <p>Advanced software development & systems.</p>
+          <ul><li>Advanced Software Development</li><li>Mobile Computing</li></ul>
+          <a href="{% url 'contact' %}" class="btn btn-primary">Learn More</a>
+        </div>
+
+        <div class="course-card">
+          <div class="emoji">🔬</div>
+          <h3>M.Tech</h3>
+          <p>Research-driven specialization across disciplines.</p>
+          <ul><li>Research Methodology</li><li>Specialized Electives</li></ul>
+          <a href="{% url 'contact' %}" class="btn btn-primary">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="stats-section">
+    <div class="container" style="text-align:center;">
+      <h2 style="font-size:2rem;margin-bottom:14px;">Ready to begin your journey?</h2>
+      <p style="opacity:.9;margin-bottom:24px;">Admissions open for 2025–26. Apply today and shape your future with Sefora.</p>
+      <a href="{% url 'contact' %}" class="btn btn-primary">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Sefora National College</h4><p>Empowering learners since 2000.</p><div class="social-icons"><a href="#">f</a><a href="#">in</a><a href="#">X</a><a href="#">ig</a></div></div>
+        <div><h4>Quick Links</h4><ul><li><a href="{% url 'home' %}">Home</a></li><li><a href="{% url 'about' %}">About</a></li><li><a href="{% url 'courses' %}">Courses</a></li><li><a href="{% url 'contact' %}">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li>📍 123 Knowledge Road, Sefora City</li><li>📞 +91 98765 43210</li><li>✉️ info@seforacollege.edu</li></ul></div>
+        <div><h4>Office Hours</h4><ul><li>Mon–Fri: 9 AM – 5 PM</li><li>Saturday: 9 AM – 1 PM</li></ul></div>
+      </div>
+      <div class="footer-bottom">© 2025 Sefora National College. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

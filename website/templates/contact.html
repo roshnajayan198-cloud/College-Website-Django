@@ -1,0 +1,509 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | Sefora National College</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+  <div class="container nav-wrap">
+
+    <a href="{% url 'home' %}" class="logo">
+
+      <span class="logo-circle">S</span>
+      Sefora National College
+
+    </a>
+
+
+    <button class="menu-toggle"
+    onclick="document.getElementById('navLinks').classList.toggle('open')">
+
+      ☰
+
+    </button>
+
+
+
+    <ul class="nav-links" id="navLinks">
+
+      <li><a href="{% url 'home' %}">Home</a></li>
+
+      <li><a href="{% url 'about' %}">About</a></li>
+
+      <li><a href="{% url 'courses' %}">Courses</a></li>
+
+      <li><a href="{% url 'contact' %}" class="active">Contact</a></li>
+
+    </ul>
+
+
+  </div>
+
+</nav>
+
+
+
+
+
+<!-- BANNER -->
+
+<header class="page-banner"
+style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600');">
+
+
+  <div class="page-banner-content">
+
+    <h1>Get In Touch</h1>
+
+    <p>
+      We are here to help with admissions, courses,
+      scholarships, and campus visits.
+    </p>
+
+
+  </div>
+
+
+</header>
+
+
+
+
+
+<!-- INFO CARDS -->
+
+<section>
+
+<div class="container">
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="icon">📍</div>
+
+<h3>Address</h3>
+
+<p>
+123 Knowledge Road,
+<br>
+Sefora City, 560001
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="icon">📞</div>
+
+<h3>Phone</h3>
+
+<p>
++91 98765 43210
+<br>
++91 91234 56789
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="icon">✉️</div>
+
+<h3>Email</h3>
+
+<p>
+info@seforacollege.edu
+<br>
+admissions@seforacollege.edu
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- TWO COLUMN -->
+
+<section style="background:#fff;">
+
+
+<div class="container">
+
+
+<div class="contact-grid">
+
+
+
+<div>
+
+
+<h2 style="color:var(--primary);margin-bottom:18px;">
+Why Contact Us?
+</h2>
+
+
+
+<p style="color:var(--muted);">
+
+Our admissions team is ready to guide you through
+every step of your journey at Sefora National College.
+
+</p>
+
+
+
+<ul class="feature-list" style="margin-top:18px;">
+
+
+<li>Admission Guidance</li>
+
+<li>Course Information</li>
+
+<li>Scholarship Details</li>
+
+<li>Placement Assistance</li>
+
+<li>Campus Visit Scheduling</li>
+
+
+</ul>
+
+
+
+
+<div class="office-hours">
+
+
+<h4>Office Hours</h4>
+
+
+<p>
+<strong>Monday – Friday:</strong>
+9 AM – 5 PM
+</p>
+
+
+<p>
+<strong>Saturday:</strong>
+9 AM – 1 PM
+</p>
+
+
+<p>
+<strong>Sunday:</strong>
+Closed
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<form class="contact-form" method="POST">
+
+
+{% csrf_token %}
+
+
+<h2 style="color:var(--primary);margin-bottom:18px;">
+Send Us a Message
+</h2>
+
+
+
+<div class="form-group">
+
+<label>Full Name</label>
+
+<input type="text"
+name="name"
+placeholder="Your full name"
+required>
+
+</div>
+
+
+
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input type="email"
+name="email"
+placeholder="you@example.com"
+required>
+
+</div>
+
+
+
+
+
+<div class="form-group">
+
+<label>Phone Number</label>
+
+<input type="tel"
+name="phone"
+placeholder="+91 ..."
+required>
+
+</div>
+
+
+
+
+
+<div class="form-group">
+
+<label>Message</label>
+
+<textarea name="message"
+placeholder="How can we help you?"
+required></textarea>
+
+
+</div>
+
+
+
+
+<button type="submit"
+class="btn btn-primary"
+style="width:100%;">
+
+Submit Inquiry
+
+</button>
+{% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+
+
+</form>
+
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- MAP -->
+
+
+<section style="padding:0;">
+
+
+<iframe
+
+src="https://www.openstreetmap.org/export/embed.html?bbox=77.58%2C12.96%2C77.62%2C13.00&layer=mapnik"
+
+style="width:100%;height:380px;border:0;display:block;"
+
+loading="lazy">
+
+</iframe>
+
+
+</section>
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer class="footer">
+
+
+<div class="container">
+
+
+<div class="footer-grid">
+
+
+<div>
+
+<h4>Sefora National College</h4>
+
+<p>
+Empowering learners since 2000.
+</p>
+
+
+<div class="social-icons">
+
+<a href="#">f</a>
+
+<a href="#">in</a>
+
+<a href="#">X</a>
+
+<a href="#">ig</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div>
+
+<h4>Quick Links</h4>
+
+
+<ul>
+
+<li><a href="{% url 'home' %}">Home</a></li>
+
+<li><a href="{% url 'about' %}">About</a></li>
+
+<li><a href="{% url 'courses' %}">Courses</a></li>
+
+<li><a href="{% url 'contact' %}">Contact</a></li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div>
+
+<h4>Contact</h4>
+
+
+<ul>
+
+<li>📍 123 Knowledge Road, Sefora City</li>
+
+<li>📞 +91 98765 43210</li>
+
+<li>✉️ info@seforacollege.edu</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div>
+
+<h4>Office Hours</h4>
+
+
+<ul>
+
+<li>Mon–Fri: 9 AM – 5 PM</li>
+
+<li>Saturday: 9 AM – 1 PM</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="footer-bottom">
+
+© 2025 Sefora National College. All rights reserved.
+
+</div>
+
+
+
+</div>
+
+
+</footer>
+
+
+
+
+</body>
+
+</html>

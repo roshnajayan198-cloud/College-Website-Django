@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Sefora National College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-wrap">
+      <a href="{% url 'home' %}" class="logo"><span class="logo-circle">S</span> Sefora National College</a>
+      <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}" class="active">About</a></li>
+        <li><a href="{% url 'courses' %}">Courses</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BANNER -->
+  <header class="page-banner">
+    <div class="page-banner-content">
+      <h1>About Sefora National College</h1>
+      <p>A legacy of excellence, innovation, and inspired learning.</p>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section>
+    <div class="container">
+      <div class="two-col">
+        <img src="{% static 'images/college1.jpg' %}" alt="Campus">
+        <div>
+          <h2>Our Story</h2>
+          <p>Sefora National College is committed to providing quality education, fostering innovation, and developing future leaders. Founded with a vision to bridge knowledge and society, our institution has grown into a hub of academic excellence.</p>
+          <p style="margin-top:12px;">Our educational philosophy centers on holistic development — combining intellectual rigor, ethical grounding, and creative thinking inside a nurturing academic environment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section style="background:#fff;">
+    <div class="container">
+      <div class="section-title"><h2>Mission & Vision</h2></div>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+        <div class="card"><div class="icon">🎯</div><h3>Our Mission</h3><p>To provide transformative education that develops knowledge, leadership, innovation, and ethical values in every student.</p></div>
+        <div class="card"><div class="icon">🌟</div><h3>Our Vision</h3><p>To become a premier institution recognized globally for academic excellence and social responsibility.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item"><h3>25+</h3><p>Years of Excellence</p></div>
+        <div class="stat-item"><h3>5000+</h3><p>Students Enrolled</p></div>
+        <div class="stat-item"><h3>100+</h3><p>Expert Faculty</p></div>
+        <div class="stat-item"><h3>95%</h3><p>Placement Rate</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPUS LIFE -->
+  <section>
+    <div class="container">
+      <div class="section-title"><h2>Campus Life</h2><p>Where learning meets passion, friendship, and discovery.</p></div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="{% static 'images/college2.jpg' %}" alt="Activities"><div class="caption">Student Clubs</div></div>
+        <div class="gallery-item"><img src="{% static 'images/college3.jpg' %}" alt="Events"><div class="caption">Annual Events</div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800" alt="Cultural"><div class="caption">Cultural Fest</div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800" alt="Learning"><div class="caption">Collaborative Learning</div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1562774053-701939374585?w=800" alt="College Laboratory"><div class="caption">Advanced Laboratory</div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800" alt="Students Learning"><div class="caption">Student Learning</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Sefora National College</h4><p>Empowering learners since 2000.</p><div class="social-icons"><a href="#">f</a><a href="#">in</a><a href="#">X</a><a href="#">ig</a></div></div>
+        <div><h4>Quick Links</h4><ul><li><a href="{% url 'home' %}">Home</a></li><li><a href="{% url 'about' %}">About</a></li><li><a href="{% url 'courses' %}">Courses</a></li><li><a href="{% url 'contact' %}">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li>📍 123 Knowledge Road, Sefora City</li><li>📞 +91 98765 43210</li><li>✉️ info@seforacollege.edu</li></ul></div>
+        <div><h4>Office Hours</h4><ul><li>Mon–Fri: 9 AM – 5 PM</li><li>Saturday: 9 AM – 1 PM</li></ul></div>
+      </div>
+      <div class="footer-bottom">© 2025 Sefora National College. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

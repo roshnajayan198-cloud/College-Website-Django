@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sefora National College | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-wrap">
+      <a href="{% url 'home' %}" class="logo">
+        <span class="logo-circle">S</span> Sefora National College
+      </a>
+      <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="{% url 'home' %}" class="active">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'courses' %}">Courses</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Sefora National College</h1>
+      <p>Empowering Students Through Quality Education and Innovation</p>
+      <div class="hero-buttons">
+        <a href="{% url 'courses' %}" class="btn btn-primary">Explore Courses</a>
+        <a href="{% url 'contact' %}" class="btn btn-outline">Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HIGHLIGHTS -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>College Highlights</h2>
+        <p>What makes Sefora a place where students thrive academically and personally.</p>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="icon">👩‍🏫</div><h3>Experienced Faculty</h3><p>Industry experts and PhD-qualified mentors guiding every student.</p></div>
+        <div class="card"><div class="icon">🔬</div><h3>Modern Laboratories</h3><p>State-of-the-art labs equipped with the latest research tools.</p></div>
+        <div class="card"><div class="icon">💼</div><h3>Placement Support</h3><p>Dedicated cell with 95% placement record across top companies.</p></div>
+        <div class="card"><div class="icon">🚀</div><h3>Research & Innovation</h3><p>Active research programs, patents and student-led innovations.</p></div>
+        <div class="card"><div class="icon">🌐</div><h3>Global Exposure</h3><p>International collaborations, workshops and opportunities to enhance student skills.</p></div>
+        <div class="card"><div class="icon">🎓</div><h3>Student Development</h3><p>Career guidance, skill training and personality development programs for students.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section style="background:#fff;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Campus Gallery</h2>
+        <p>A glimpse into our vibrant campus life and learning spaces.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="{% static 'images/college1.jpg' %}" alt="College Building"><div class="caption">Main Campus Building</div></div>
+        <div class="gallery-item"><img src="{% static 'images/college2.jpg' %}" alt="Classroom"><div class="caption">Smart Classrooms</div></div>
+        <div class="gallery-item"><img src="{% static 'images/college3.jpg' %}" alt="Laboratory"><div class="caption">Research Laboratory</div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800" alt="Library"><div class="caption">Central Library</div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800" alt="Students"><div class="caption">Student Activities</div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1532649538693-f3a2ec1bf8bd?w=800" alt="Sports"><div class="caption">Sports & Wellness</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section>
+    <div class="container">
+      <div class="two-col">
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=900" alt="Why choose us">
+        <div>
+          <h2>Why Choose Sefora?</h2>
+          <p>Sefora National College blends rigorous academics with industry-aligned learning, helping students become future-ready leaders.</p>
+          <ul class="feature-list">
+            <li>Academic Excellence backed by global standards</li>
+            <li>Industry-focused, project-based education</li>
+            <li>Comprehensive Career Development programs</li>
+            <li>24/7 Student Support and Mentorship</li>
+            <li>Scholarships & Financial Aid for merit students</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Sefora National College</h4>
+          <p>Empowering learners since 2000 through transformative education and innovation.</p>
+          <div class="social-icons">
+            <a href="#">f</a><a href="#">in</a><a href="#">X</a><a href="#">ig</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'courses' %}">Courses</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>📍 123 Knowledge Road, Sefora City</li>
+            <li>📞 +91 98765 43210</li>
+            <li>✉️ info@seforacollege.edu</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p>Subscribe for admission updates and events.</p>
+          <form style="display:flex;gap:8px;margin-top:10px;">
+            <input type="email" placeholder="Your email" style="flex:1;padding:10px;border-radius:8px;border:none;">
+            <button class="btn btn-primary" style="padding:10px 18px;">→</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Sefora National College. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
