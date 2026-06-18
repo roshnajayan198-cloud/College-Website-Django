@@ -56,9 +56,6 @@ College-Website
 ├── requirements.txt
 └── README.md
 
-
----
-
 ## ⚙️ Installation & Setup
 
 ### Clone the repository
