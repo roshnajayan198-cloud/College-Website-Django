@@ -8,8 +8,6 @@ The website is designed to provide a simple and user-friendly experience for stu
 ## 🚀 Features
 
 - 🏫 College information and overview
-- 👩‍🏫 Faculty and facilities section
-- 🔬 Modern laboratories showcase
 - 💼 Placement support details
 - 🎉 Events and gallery section
 - 📩 Contact form with database storage
@@ -86,9 +84,6 @@ python manage.py runserver
 Open in browser:
 
 http://127.0.0.1:8000/
-📸 Screenshots
-
-(Add your website screenshots here)
 
 📬 Contact Form
 
